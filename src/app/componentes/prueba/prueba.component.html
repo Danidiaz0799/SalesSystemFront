@@ -1,0 +1,120 @@
+<form class="formulario" (submit)="sendData()">
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">advisorId</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="advisorId" placeholder="advisorId" [(ngModel)]="datos.advisorId">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">date</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="date" placeholder="date" [(ngModel)]="datos.date">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">description</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="description" placeholder="description" [(ngModel)]="datos.description">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">price</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="price" placeholder="price" [(ngModel)]="datos.price">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">saleStatusId</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="saleStatusId" placeholder="saleStatusId" [(ngModel)]="datos.saleStatusId">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">customerId</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="customerId" placeholder="customerId" [(ngModel)]="datos.customerId">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10 mx-auto text-center">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Advisor ID</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Sale Status ID</th>
+      <th>Customer ID</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dato of products">
+      <td>{{ dato.advisorId }}</td>
+      <td>{{ dato.date }}</td>
+      <td>{{ dato.description }}</td>
+      <td>{{ dato.price }}</td>
+      <td>{{ dato.saleStatusId }}</td>
+      <td>{{ dato.customerId }}</td>
+      <td>
+        <button class="btn btn-sm btn-primary" (click)="updateData(dato)">Editar</button>
+        <button class="btn btn-sm btn-danger" (click)="deleteData(dato.saleId)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Formulario de edición debajo de la tabla -->
+<form class="formulario" *ngIf="productsSelect" (submit)="saveData()">
+  <div class="form-group row">
+    <label for="advisorId" class="col-sm-2 col-form-label">Advisor ID:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="advisorId" name="advisorId" [(ngModel)]="productsSelect.advisorId">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="date" class="col-sm-2 col-form-label">Date:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="date" name="date" [(ngModel)]="productsSelect.date">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="description" class="col-sm-2 col-form-label">Description:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="description" name="description" [(ngModel)]="productsSelect.description">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="price" class="col-sm-2 col-form-label">Price:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="price" name="price" [(ngModel)]="productsSelect.price">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="saleStatusId" class="col-sm-2 col-form-label">Sale Status ID:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="saleStatusId" name="saleStatusId" [(ngModel)]="productsSelect.saleStatusId">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="customerId" class="col-sm-2 col-form-label">Customer ID:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="customerId" name="customerId" [(ngModel)]="productsSelect.customerId">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    </div>
+  </div>
+</form>
+
+
+
+

@@ -1,0 +1,68 @@
+/* Estilos generales del formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Estilos para las etiquetas de los campos */
+.col-form-label {
+  font-weight: bold;
+}
+
+/* Estilos para los campos de entrada */
+.form-control {
+  border-color: #ced4da;
+  border-radius: 4px;
+}
+
+/* Estilos para el botón */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Estilos para la sección de cada campo */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Estilos específicos para cada campo */
+.form-group:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+.form-group:nth-child(even) {
+  background-color: #e9ecef;
+}
+
+/* Estilos para el campo de advisorId */
+#advisorId {
+  border-color: #17a2b8;
+}
+
+/* Estilos para el campo de date */
+#date {
+  border-color: #28a745;
+}
+
+/* Estilos para el campo de description */
+#description {
+  border-color: #ffc107;
+}
+
+/* Estilos para el campo de price */
+#price {
+  border-color: #dc3545;
+}
+
+/* Estilos para el campo de saleStatusId */
+#saleStatusId {
+  border-color: #6c757d;
+}
+
+/* Estilos para el campo de customerId */
+#customerId {
+  border-color: #6610f2;
+}
