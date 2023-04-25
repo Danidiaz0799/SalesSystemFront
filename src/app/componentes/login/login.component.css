@@ -1,14 +1,39 @@
-.container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+body {
+    background-color: #1d1d1d;
+    color: #fff;
+  }
 
-.form-group {
-    margin-bottom: 1rem;
-}
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+  }
 
-.btn-block {
-    margin-top: 1rem;
-}
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .form-control {
+    background-color: #333;
+    border-color: #444;
+    color: #fff;
+  }
+
+  .form-control:focus {
+    background-color: #444;
+    border-color: #666;
+    color: #fff;
+  }
+
+  .btn-primary {
+    background-color: #a57d3c;
+    border-color: #a57d3c;
+    font-weight: bold;
+  }
+
+  .btn-primary:hover {
+    background-color: #d3bda5;
+    border-color: #d3bda5;
+    font-weight: bold;
+  }
