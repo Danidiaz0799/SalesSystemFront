@@ -60,7 +60,7 @@
       <td>{{ dato.date }}</td>
       <td>{{ dato.description }}</td>
       <td>{{ dato.price }}</td>
-      <td>{{ dato.saleStatusId }}</td>
+      <td [ngStyle]="{ 'background-color': getColor(dato.saleStatusId) }">{{ dato.saleStatusId }}</td>
       <td>{{ dato.customerId }}</td>
       <td>
         <button class="btn btn-sm btn-primary" (click)="updateData(dato)">Editar</button>
