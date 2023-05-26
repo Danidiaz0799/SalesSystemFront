@@ -26,6 +26,7 @@
 /* Estilos para la sección de cada campo */
 .form-group {
   margin-bottom: 20px;
+  width: 40%;
 }
 
 /* Estilos específicos para cada campo */
@@ -65,4 +66,16 @@
 /* Estilos para el campo de customerId */
 #customerId {
   border-color: #6610f2;
+}
+
+.rojo {
+  background-color: red !important;
+}
+
+.azul {
+  background-color: blue !important;
+}
+
+.verde {
+  background-color: green !important;
 }
