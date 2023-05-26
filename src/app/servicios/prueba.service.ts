@@ -10,7 +10,7 @@ import { Product } from 'src/app/modelos/product.model';
 })
 export class PruebaService {
 
-  private apiUrl = 'https://localhost:7257/api/Sales';
+  private apiUrl = 'http://www.ssystem.somee.com/api/Sales';
 
   constructor(private http: HttpClient) { }
 
